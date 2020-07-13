@@ -16,7 +16,9 @@ const links: Routes = [
   {path: 'viewItRoutForShowAllUsers', component: AllUsersComponent},
   {path: 'viewItRoutForShowAllPosts', component: AllPostsComponent},
   {path: 'viewItRoutForShowAllComments', component: AllCommentsComponent},
-  {path: 'posts/:id', component: AllPostsComponent}
+  {path: 'posts/:id', component: AllPostsComponent},
+  {path: 'comments/:postId', component: AllCommentsComponent}
+
 ];
 
 

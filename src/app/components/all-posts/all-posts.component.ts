@@ -12,10 +12,13 @@ export class AllPostsComponent implements OnInit {
 
   postsAll: Post[];
 
-  constructor(private postService: PostService, private activatedRoute: ActivatedRoute) {
+  constructor(
+    private postService: PostService,
+    private activatedRoute: ActivatedRoute) {
     if (!!this.activatedRoute.snapshot.params.id) {
       this.activatedRoute.params.subscribe(value =>
-        this.postService.getPostsOfUser(value.id).subscribe(value1 => {
+        this.postService.getPostsOfUser(value.id)
+          .subscribe(value1 => {
           this.postsAll = value1;
         })
       );
